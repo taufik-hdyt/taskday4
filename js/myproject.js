@@ -47,7 +47,7 @@ function addBlog(event) {
 }
 
 function renderBlog() {
-  document.getElementById("post").innerHTML = "";
+  document.getElementById("blog-post").innerHTML = "";
   for (let i = 0; i < dataBlog.length; i++) {
     document.getElementById("blog-post").innerHTML += `
     <div id="post">
