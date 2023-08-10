@@ -56,79 +56,84 @@ nav button a {
   text-decoration: none;
 }
 
-/*======  container  ========= */
-
-.container {
-  padding: 0 40px;
-  background-color: #eaeaea;
+body {
+  background: #ebebeb;
 }
 
-h2 {
-  text-align: center;
-  padding: 20px;
-}
-
-.container .info {
+.container .card {
+  width: 50vw;
+  box-shadow: inset 0 0 15px black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 40px auto;
+  background: whitesmoke;
   display: flex;
-  gap: 50px;
+  padding: 50px 50px;
+  gap: 20px;
 }
 
-.container .info img {
-  width: 100%;
-}
-
-.container .info .info-img {
-  flex: 60%;
+.container .card-info {
+  flex: 0 60%;
   max-width: 60%;
 }
-
-.container .info .info-detail {
-  flex: 40%;
-  max-width: 40%;
-}
-
-.container .info-detail p {
-  font-size: 16px;
-  padding: 5px;
-}
-.container .info-detail .title {
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.container .info-detail i {
-  margin-right: 10px;
-  width: 30px;
-}
-
-.container .info-detail .duration {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.container .info-detail .skills {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 10px;
-}
-
-.container .info-detail .technologies {
-  margin-top: 50px;
-}
-
-.container .paragraph {
-  margin-top: 20px;
+.container .card-info p {
   text-align: justify;
 }
 
-.container .section.back-section {
-  z-index: 1;
+.container .button {
+  margin-top: 20px;
 }
-.container .section.active {
-  z-index: 2;
-  opacity: 1;
-  animation: slideSection 1s ease;
+
+.container .card-info .contact {
+  text-decoration: none;
+  background-color: black;
+  width: 100%;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.container .card-info .download-cv {
+  background-color: transparent;
+  color: black;
+  margin-left: 10px;
+}
+
+.container .social-media {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+.container .social-media a {
+  color: black;
+  transition: 0.3s ease;
+}
+.container .social-media a:hover {
+  transform: scale(1.1);
+}
+
+.container .card-img {
+  flex: 0 40%;
+  max-width: 40%;
+  transition: all 0.3s ease;
+}
+
+.container .card-img:hover {
+  transform: scale(1.1);
+}
+
+.container .card-img {
+  box-shadow: 0 0 15px black;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+.container .card-img img {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px 20px 0 0;
+}
+.container .card-img h2,
+p {
+  text-align: center;
 }
