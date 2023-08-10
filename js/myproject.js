@@ -49,7 +49,7 @@ function addBlog(event) {
 function renderBlog() {
   document.getElementById("post").innerHTML = "";
   for (let i = 0; i < dataBlog.length; i++) {
-    document.getElementById("post").innerHTML += `
+    document.getElementById("blog-post").innerHTML += `
     <div id="post">
     <div class="card">
       <img class="img-cover" src=${dataBlog[i].image} alt="profile" />
