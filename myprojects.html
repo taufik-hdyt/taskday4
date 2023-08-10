@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link rel="stylesheet" href="css/myprojects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <img src="image/profile.png" alt="logo" />
+        </li>
+        <li class="btn-nav active"><a href="index.html">Home</a></li>
+        <li class="btn-nav"><a href="myprojects.html">My Projects</a></li>
+      </ul>
+      <button>
+        <a href="contact.html">Contact</a>
+      </button>
+    </nav>
+
+    <div class="container">
+      <div class="form">
+        <form onsubmit="addBlog(event)">
+          <h1>ADD MY PROJECT</h1>
+          <div class="input">
+            <label for="input-project-name">Project Name</label>
+            <input type="text" id="input-project-name" />
+          </div>
+
+          <div class="input-date">
+            <div class="input">
+              <label for="input-project-name">Start Date</label>
+              <input type="date" id="input-start-date" />
+            </div>
+            <div class="input">
+              <label for="input-project-name">End Date</label>
+              <input type="date" id="input-end-date" />
+            </div>
+          </div>
+
+          <div class="input">
+            <label for="input-description">Description</label>
+            <textarea id="input-description"></textarea>
+          </div>
+
+          <div class="technologies">
+            <p>Technologies</p>
+            <div class="tech">
+              <div>
+                <input type="checkbox" id="check-nodejs" value="Node JS" />
+                <label for="check-nodejs"> Node Js</label>
+              </div>
+              <div>
+                <input type="checkbox" id="check-nextjs" />
+                <label for="check-nextjs"> Next Js</label>
+              </div>
+              <div>
+                <input type="checkbox" id="check-reactjs" />
+                <label for="check-reactjs"> React Js</label>
+              </div>
+              <div>
+                <input type="checkbox" id="check-typescript" />
+                <label for="check-typescript"> TypeScript</label>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="upload">
+            <p>Upload Image</p>
+            <div class="upload-image">
+              <label for="input-img" class="attach-title">choose</label>
+              <div class="attach-icon">
+                <i class="fa-solid fa-paperclip fa-lg"></i>
+              </div>
+            </div>
+            <input type="file" id="input-img" hidden />
+          </div>
+
+          <div class="btn-submit">
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="my-project">
+        <h1>MY PROJECT</h1>
+        <div id="post">
+          <div class="card">
+            <img class="img-cover" src="image/img.jpg" alt="profile" />
+            <p class="title">Dumbways Mobile App - 2021</p>
+            <p class="duration">durasi : 3 bulan</p>
+            <p class="description">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+              illo doloremque delectus velit excepturi alias! Dolorem velit
+              porro voluptas explicabo.
+            </p>
+
+            <div class="icons">
+              <img src="image/icons/playstore.png" alt="playstore" />
+              <img src="image/icons/android-logo.png" alt="android" />
+              <img src="image/icons/java-logo.png" alt="java" />
+            </div>
+
+            <div class="btn-group">
+              <button>edit</button>
+              <button>delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/myproject.js"></script>
+  </body>
+</html>
