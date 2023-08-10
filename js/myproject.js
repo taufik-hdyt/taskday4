@@ -11,10 +11,10 @@ function addBlog(event) {
   image = URL.createObjectURL(image[0]);
   const durasi = duration(startDate, endDate);
 
-  const nodeJsIcon = '<i class="fa-brands fa-node-js"></i>';
-  const reactIcon = '<i class="fa-brands fa-react"></i>';
-  const phpIcon = '<i class="fa-brands fa-php"></i>';
-  const javascriptIcon = '<i class="fa-brands fa-js"></i>';
+  const nodeJsIcon = '<i class="fa-brands fa-node-js fa-xl"></i>';
+  const reactIcon = '<i class="fa-brands fa-react fa-xl"></i>';
+  const phpIcon = '<i class="fa-brands fa-php fa-xl"></i>';
+  const javascriptIcon = '<i class="fa-brands fa-js fa-xl"></i>';
 
   let nodejs = document.getElementById("check-nodejs").checked
     ? nodeJsIcon
