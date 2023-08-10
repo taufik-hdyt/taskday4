@@ -9,6 +9,23 @@ function addBlog(event) {
   let image = document.getElementById("input-img").files;
 
   image = URL.createObjectURL(image[0]);
+  const durasi = duration(startDate, endDate);
+
+  const nodeJsIcon = '<i class="fa-brands fa-node-js"></i>';
+  const reactIcon = '<i class="fa-brands fa-react"></i>';
+  const phpIcon = '<i class="fa-brands fa-php"></i>';
+  const javascriptIcon = '<i class="fa-brands fa-js"></i>';
+
+  let nodejs = document.getElementById("check-nodejs").checked
+    ? nodeJsIcon
+    : "";
+  let reactjs = document.getElementById("check-reactjs").checked
+    ? reactIcon
+    : "";
+  let php = document.getElementById("check-nextjs").checked ? phpIcon : "";
+  let javascript = document.getElementById("check-javascript").checked
+    ? javascriptIcon
+    : "";
 
   let blog = {
     name,
@@ -16,6 +33,11 @@ function addBlog(event) {
     endDate,
     description,
     image,
+    durasi: durasi,
+    nodejs,
+    reactjs,
+    php,
+    javascript,
   };
 
   dataBlog.push(blog);
@@ -32,15 +54,16 @@ function renderBlog() {
     <div class="card">
       <img class="img-cover" src=${dataBlog[i].image} alt="profile" />
       <p class="title">${dataBlog[i].name}</p>
-      <p class="duration">durasi : 3 bulan</p>
+      <p class="duration">durasi : ${dataBlog[i].durasi} bulan</p>
       <p class="description">
       ${dataBlog[i].description}
       </p>
 
       <div class="icons">
-        <img src="image/icons/playstore.png" alt="playstore" />
-        <img src="image/icons/android-logo.png" alt="android" />
-        <img src="image/icons/java-logo.png" alt="java" />
+      ${dataBlog[i].nodejs}
+      ${dataBlog[i].reactjs}
+      ${dataBlog[i].php}
+      ${dataBlog[i].javascript}
       </div>
 
       <div class="btn-group">
@@ -51,4 +74,13 @@ function renderBlog() {
   </div>
     `;
   }
+}
+
+function duration(startDate, endDate) {
+  var start = new Date(startDate);
+  var end = new Date(endDate);
+
+  var year = end.getFullYear() - start.getFullYear();
+  var month = end.getMonth() - start.getMonth();
+  return year * 12 + month;
 }

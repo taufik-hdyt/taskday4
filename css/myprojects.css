@@ -172,7 +172,7 @@ textarea {
 
 .my-project .card {
   margin-top: 50px;
-  width: 350px;
+  width: 300px;
   padding: 10px;
   padding-bottom: 20px;
   border: 1px solid grey;
@@ -216,4 +216,10 @@ textarea {
   background: black;
   color: white;
   width: 100%;
+}
+
+.my-project .blog-post {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
