@@ -224,3 +224,7 @@ textarea {
   justify-content: space-between;
   gap: 20px;
 }
+
+.my-project #post {
+  cursor: pointer;
+}

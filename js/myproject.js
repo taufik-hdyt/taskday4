@@ -84,3 +84,12 @@ function duration(startDate, endDate) {
   var month = end.getMonth() - start.getMonth();
   return year * 12 + month;
 }
+
+function detailBlog() {
+  const detail = document.getElementById("post");
+  detail.addEventListener("click", function () {
+    const a = document.createElement("a");
+    a.href = "projectdetail.html";
+    a.click();
+  });
+}
