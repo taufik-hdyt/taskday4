@@ -39,10 +39,8 @@ function addBlog(event) {
     php,
     javascript,
   };
-
   dataBlog.push(blog);
   console.log(dataBlog);
-
   renderBlog();
 }
 
@@ -54,18 +52,17 @@ function renderBlog() {
     <div class="card">
       <img class="img-cover" src=${dataBlog[i].image} alt="profile" />
       <p class="title">${dataBlog[i].name}</p>
-      <p class="duration">durasi : ${dataBlog[i].durasi} bulan</p>
+      <p class="duration">durasi : ${dataBlog[i].durasi}</p>
       <p class="description">
       ${dataBlog[i].description}
       </p>
-
       <div class="icons">
+
       ${dataBlog[i].nodejs}
       ${dataBlog[i].reactjs}
       ${dataBlog[i].php}
       ${dataBlog[i].javascript}
       </div>
-
       <div class="btn-group">
         <button>edit</button>
         <button>delete</button>
@@ -77,12 +74,18 @@ function renderBlog() {
 }
 
 function duration(startDate, endDate) {
-  var start = new Date(startDate);
-  var end = new Date(endDate);
+  let start = new Date(startDate);
+  let end = new Date(endDate);
+  let selisihMiliSeconds = Math.abs(end - start);
+  const selisihHari = selisihMiliSeconds / (1000 * 60 * 60 * 24);
 
-  var year = end.getFullYear() - start.getFullYear();
-  var month = end.getMonth() - start.getMonth();
-  return year * 12 + month;
+  if (selisihHari < 30) {
+    return `${selisihHari} Hari`;
+  } else if (selisihHari <= 360) {
+    return `${Math.floor(selisihHari / 30)} Bulan`;
+  } else if (selisihHari >= 360) {
+    return `${Math.floor(selisihHari / 30 / 12)} Tahun`;
+  }
 }
 
 function detailBlog() {
@@ -93,3 +96,12 @@ function detailBlog() {
     a.click();
   });
 }
+
+let fileInput = document.querySelector("#input-img");
+let fileName = document.querySelector(".file-name");
+fileInput.addEventListener("change", (event) => {
+  const selectedFile = event.target.files[0];
+  if (selectedFile) {
+    fileName.textContent = selectedFile.name;
+  }
+});

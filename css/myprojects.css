@@ -133,7 +133,7 @@ textarea {
 .container .form .upload .upload-image .attach-title {
   background: gray;
   padding: 8px 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   color: #ebebeb;
 }
 .container .form .upload .upload-image .attach-icon {
@@ -161,7 +161,7 @@ textarea {
   padding: 20px 120px;
 }
 .my-project h1 {
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
 .my-project .img-cover {
@@ -171,13 +171,13 @@ textarea {
 }
 
 .my-project .card {
-  margin-top: 50px;
   width: 300px;
   padding: 10px;
   padding-bottom: 20px;
   border: 1px solid grey;
   border-radius: 10px;
   box-shadow: 0 5px 10px gray;
+  max-height: 500px;
 }
 
 .my-project .card .title {
@@ -194,6 +194,9 @@ textarea {
 .my-project .card .description {
   margin-top: 10px;
   text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 80px;
 }
 .my-project .card .icons img {
   width: 20px;
@@ -221,8 +224,7 @@ textarea {
 .my-project .blog-post {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 50px;
 }
 
 .my-project #post {
