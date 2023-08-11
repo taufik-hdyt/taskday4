@@ -9,12 +9,11 @@ function addBlog(event) {
   let image = document.getElementById("input-img").files;
 
   image = URL.createObjectURL(image[0]);
-  const durasi = duration(startDate, endDate);
-
   const nodeJsIcon = '<i class="fa-brands fa-node-js fa-xl"></i>';
   const reactIcon = '<i class="fa-brands fa-react fa-xl"></i>';
   const phpIcon = '<i class="fa-brands fa-php fa-xl"></i>';
   const javascriptIcon = '<i class="fa-brands fa-js fa-xl"></i>';
+  const durasi = duration(startDate, endDate);
 
   let nodejs = document.getElementById("check-nodejs").checked
     ? nodeJsIcon
@@ -53,7 +52,7 @@ function renderBlog() {
   document.getElementById("blog-post").innerHTML = "";
   for (let i = 0; i < dataBlog.length; i++) {
     document.getElementById("blog-post").innerHTML += `
-          <div id="post">
+          <div id="post" onclick="detailBlog()">
           <div class="card">
             <img class="img-cover" src=${dataBlog[i].image} alt="profile" />
             <p class="title">${dataBlog[i].name}</p>
