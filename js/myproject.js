@@ -39,46 +39,51 @@ function addBlog(event) {
     php,
     javascript,
   };
-  dataBlog.push(blog);
-  console.log(dataBlog);
-  renderBlog();
+  const splitDurasi = durasi.split(",");
+  const resultDurasi = splitDurasi.map((e) => parseInt(e));
+  if (resultDurasi < 0) {
+    alert("Date is incorrect");
+  } else {
+    dataBlog.push(blog);
+    renderBlog();
+  }
 }
 
 function renderBlog() {
   document.getElementById("blog-post").innerHTML = "";
   for (let i = 0; i < dataBlog.length; i++) {
     document.getElementById("blog-post").innerHTML += `
-    <div id="post">
-    <div class="card">
-      <img class="img-cover" src=${dataBlog[i].image} alt="profile" />
-      <p class="title">${dataBlog[i].name}</p>
-      <p class="duration">durasi : ${dataBlog[i].durasi}</p>
-      <p class="description">
-      ${dataBlog[i].description}
-      </p>
-      <div class="icons">
+          <div id="post">
+          <div class="card">
+            <img class="img-cover" src=${dataBlog[i].image} alt="profile" />
+            <p class="title">${dataBlog[i].name}</p>
+            <p class="duration">durasi : ${dataBlog[i].durasi}</p>
+            <p class="description">
+            ${dataBlog[i].description}
+            </p>
+            <div class="icons">
 
-      ${dataBlog[i].nodejs}
-      ${dataBlog[i].reactjs}
-      ${dataBlog[i].php}
-      ${dataBlog[i].javascript}
-      </div>
-      <div class="btn-group">
-        <button>edit</button>
-        <button>delete</button>
-      </div>
-    </div>
-  </div>
-    `;
+            ${dataBlog[i].nodejs}
+            ${dataBlog[i].reactjs}
+            ${dataBlog[i].php}
+            ${dataBlog[i].javascript}
+            </div>
+            <div class="btn-group">
+              <button>edit</button>
+              <button>delete</button>
+            </div>
+          </div>
+        </div>
+          `;
   }
 }
 
 function duration(startDate, endDate) {
   let start = new Date(startDate);
   let end = new Date(endDate);
-  let selisihMiliSeconds = Math.abs(end - start);
+  let selisihMiliSeconds = end - start;
+  console.log(selisihMiliSeconds);
   const selisihHari = selisihMiliSeconds / (1000 * 60 * 60 * 24);
-
   if (selisihHari < 30) {
     return `${selisihHari} Hari`;
   } else if (selisihHari <= 360) {
@@ -96,7 +101,6 @@ function detailBlog() {
     a.click();
   });
 }
-
 let fileInput = document.querySelector("#input-img");
 let fileName = document.querySelector(".file-name");
 fileInput.addEventListener("change", (event) => {
