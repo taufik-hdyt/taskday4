@@ -17,6 +17,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
+  box-shadow: 0 0 10px gray;
 }
 
 nav ul {
@@ -60,7 +61,6 @@ nav button a {
 
 .container {
   padding: 0 40px;
-  background-color: #eaeaea;
 }
 
 h2 {
