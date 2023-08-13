@@ -18,7 +18,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  box-shadow: 0 -2px 10px black;
+  box-shadow: 0 0 10px gray;
 }
 
 nav ul {
@@ -68,7 +68,6 @@ nav button a {
   justify-content: center;
   padding-bottom: 50px;
   padding-top: 20px;
-  background-color: #ebebeb;
 }
 
 .container .form .input {
@@ -156,7 +155,7 @@ textarea {
 /* =================== my-project ================== */
 
 .my-project {
-  background-color: white;
+  background-color: #ebebeb;
   min-height: 500px;
   padding: 20px 120px;
 }

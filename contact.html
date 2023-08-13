@@ -4,39 +4,55 @@
     <title>Contact Form</title>
   </head>
   <body>
-    <form>
-      <h2>GET IN TOUCH</h2>
-      <div class="input">
-        <label for="input-name">Name</label>
-        <input type="text" id="input-name">
-      </div>
-      <div  class="input required">
-        <label for="input-email">Email</label>
-        <input required type="email" id="input-email">
-      </div>
-      <div  class="input required">
-        <label for="input-phone">Phone Number</label>
-        <input type="number" id="input-phone">
-      </div>
-      <div  class="input">
-        <label for="input-subject">Subject</label>
-        <select id="input-subject">
-          <option value="" hidden></option>
-          <option >Frontend Web</option>
-          <option >Backend</option>
-          <option >FullStack</option>
-        </select>
-      </div>
+    <nav>
+      <ul>
+        <li>
+          <img src="image/profile.png" alt="logo" />
+        </li>
+        <li class="btn-nav active"><a href="index.html">Home</a></li>
+        <li class="btn-nav"><a href="myproject.html">My Projects</a></li>
+      </ul>
+      <button>
+        <a href="contact.html">Contact</a>
+      </button>
+    </nav>
 
-      <div class="input">
-        <label for="input-message">Your Messeage</label>
-        <textarea id="input-message"cols=></textarea>
-      </div>
+    <div class="form-container">
 
-      <div class="btn-submit">
-        <button type="button" onclick="submitData()">Submit</button>
-      </div>
-    </form>
+      <form>
+        <h2>GET IN TOUCH</h2>
+        <div class="input">
+          <label for="input-name">Name</label>
+          <input type="text" id="input-name">
+        </div>
+        <div  class="input required">
+          <label for="input-email">Email</label>
+          <input required type="email" id="input-email">
+        </div>
+        <div  class="input required">
+          <label for="input-phone">Phone Number</label>
+          <input type="number" id="input-phone">
+        </div>
+        <div  class="input">
+          <label for="input-subject">Subject</label>
+          <select id="input-subject">
+            <option value="" hidden></option>
+            <option >Frontend Web</option>
+            <option >Backend</option>
+            <option >FullStack</option>
+          </select>
+        </div>
+
+        <div class="input">
+          <label for="input-message">Your Messeage</label>
+          <textarea id="input-message"cols=></textarea>
+        </div>
+
+        <div class="btn-submit">
+          <button type="button" onclick="submitData()">Submit</button>
+        </div>
+      </form>
+    </div>
 
     <script src="js/contact.js"></script>
   </body>
