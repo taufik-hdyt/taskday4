@@ -77,6 +77,7 @@ function renderBlog() {
   }
 }
 
+// Menghitung Duration
 function duration(startDate, endDate) {
   let start = new Date(startDate);
   let end = new Date(endDate);
@@ -92,6 +93,7 @@ function duration(startDate, endDate) {
   }
 }
 
+// event clik Blog Detail
 function detailBlog() {
   const detail = document.getElementById("post");
   detail.addEventListener("click", function () {
@@ -100,6 +102,8 @@ function detailBlog() {
     a.click();
   });
 }
+
+// Menampilkan File Name
 let fileInput = document.querySelector("#input-img");
 let fileName = document.querySelector(".file-name");
 fileInput.addEventListener("change", (event) => {
