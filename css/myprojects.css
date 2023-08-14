@@ -88,7 +88,7 @@ textarea {
   padding: 5px;
   font-size: 18px;
   border: none;
-  border: 1px solid black;
+  border: 1px solid gray;
 }
 .container .input textarea {
   height: 200px;
@@ -115,15 +115,14 @@ textarea {
 .container .form .technologies .tech input {
   width: 20px;
   height: 20px;
-  background-color: red;
   margin-right: 5px;
 }
 
 .container .form .upload .upload-image {
   display: flex;
   align-items: center;
-  border-radius: 9px;
-  border: 2px solid black;
+  border-radius: 5px;
+  border: 1px solid gray;
   justify-content: space-between;
   background: white;
 }
