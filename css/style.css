@@ -58,7 +58,7 @@ nav button a {
 }
 .container .card {
   width: 50vw;
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 10px;
   padding: 10px;
   margin: 40px auto;
@@ -120,7 +120,7 @@ nav button a {
 }
 
 .container .card-img {
-  border: 1px solid black;
+  border: 1px solid gray;
   border-radius: 20px;
   padding-bottom: 20px;
 }
