@@ -16,7 +16,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 2px gray;
 }
 
 nav ul {
@@ -70,7 +70,7 @@ form {
   border-radius: 10px;
   background-color: #ebebeb;
   margin-top: 50px;
-  box-shadow: 0 5px 10px black;
+  box-shadow: 0 2px 5px black;
 }
 
 form input,

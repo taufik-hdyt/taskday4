@@ -18,7 +18,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 2px gray;
 }
 
 nav ul {
@@ -88,7 +88,7 @@ textarea {
   padding: 5px;
   font-size: 18px;
   border: none;
-  box-shadow: 0 2px 10px gray;
+  border: 1px solid black;
 }
 .container .input textarea {
   height: 200px;
@@ -116,7 +116,6 @@ textarea {
   width: 20px;
   height: 20px;
   background-color: red;
-  box-shadow: 0 2px 5px gray;
   margin-right: 5px;
 }
 
@@ -124,7 +123,7 @@ textarea {
   display: flex;
   align-items: center;
   border-radius: 9px;
-  border: 2px solid gray;
+  border: 2px solid black;
   justify-content: space-between;
   background: white;
 }

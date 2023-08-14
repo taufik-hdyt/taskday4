@@ -84,6 +84,7 @@ function duration(startDate, endDate) {
   let selisihMiliSeconds = end - start;
   console.log(selisihMiliSeconds);
   const selisihHari = selisihMiliSeconds / (1000 * 60 * 60 * 24);
+
   if (selisihHari < 30) {
     return `${selisihHari} Hari`;
   } else if (selisihHari <= 360) {
