@@ -169,7 +169,7 @@ h2 {
   }
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .container .info {
     grid-template-columns: 1fr;
     gap: 10px;

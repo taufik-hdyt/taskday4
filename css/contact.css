@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -65,7 +66,7 @@ nav button a {
   padding: 20px;
 }
 form {
-  width: 400px;
+  width: 40vw;
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
@@ -81,14 +82,15 @@ textarea {
   border-radius: 5px;
   font-size: 20px;
   background-color: white;
-
   border-color: #ebebeb;
+  padding: 0 10px;
 }
 
 form textarea {
   width: 100%;
   height: 150px;
   resize: none;
+  padding: 5px;
 }
 
 form input:focus {
@@ -146,7 +148,7 @@ select {
   font-weight: bold;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   nav {
     padding: 0 20px;
   }
@@ -158,11 +160,27 @@ select {
   nav button {
     display: none;
   }
+
+  .form-container {
+    padding: 0;
+  }
+
+  form {
+    background-color: white;
+    border: none;
+    box-shadow: none;
+  }
+
+  form input,
+  select,
+  textarea {
+    border: 1px solid gray;
+  }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   form {
-    width: 85%;
+    width: 80vw;
     margin: 20px auto;
   }
 }

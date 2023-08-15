@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 a {
@@ -73,7 +74,7 @@ nav button a {
 
 form {
   background-color: #ebebeb;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
 }
 
@@ -97,6 +98,7 @@ form {
 }
 .container .input input,
 textarea {
+  padding: 5px;
   width: 100%;
   resize: none;
   border-radius: 5px;
@@ -107,6 +109,7 @@ textarea {
 
 .container .input textarea {
   height: 200px;
+  padding: 5px;
 }
 
 .container .input-date {
@@ -163,6 +166,14 @@ textarea {
   border-radius: 50px;
   background: black;
   color: white;
+}
+
+.container .file-name {
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 200px;
 }
 
 /* =================== my-project ================== */
@@ -269,7 +280,12 @@ textarea {
   font-weight: bold;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
+  form {
+    padding: 10px;
+    background-color: white;
+  }
+
   h1 {
     font-size: 20px;
   }
@@ -286,7 +302,7 @@ textarea {
   }
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .container .form {
     width: 90vw;
     margin: 5px auto;
