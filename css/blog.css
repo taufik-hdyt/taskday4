@@ -11,13 +11,13 @@ a {
 }
 
 nav {
-  background-color: white;
+  background-color: #ebebeb;
+  box-shadow: 0 0 5px black;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  box-shadow: 0 0 10px gray;
 }
 
 nav ul {

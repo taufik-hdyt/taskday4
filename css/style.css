@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -11,13 +11,18 @@ a {
 }
 
 nav {
-  background-color: white;
+  background-color: #ebebeb;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 10px gray;
+}
+
+nav .nav-btn {
+  display: flex;
+  gap: 20px;
 }
 
 nav ul {
@@ -33,16 +38,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: black;
+  font-weight: 300;
 }
 
-nav ul .active {
-  color: black;
+nav ul li .active {
   font-weight: bold;
-}
-
-nav ul li img {
-  width: 40px;
-  margin-right: 20px;
+  color: black;
 }
 
 nav button {
@@ -56,21 +57,26 @@ nav button a {
   color: white;
   text-decoration: none;
 }
-.container .card {
-  width: 50vw;
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 40px auto;
-  background: whitesmoke;
-  display: flex;
-  padding: 50px 50px;
-  gap: 20px;
+
+.container {
+  margin-top: 20px;
 }
 
-.container .card-info {
-  flex: 0 60%;
-  max-width: 60%;
+.container .card {
+  width: 70vw;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 70px auto;
+  background: whitesmoke;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  padding: 20px 20px;
+  gap: 20px;
+  box-shadow: 0 2px 5px gray;
+}
+
+.container .card-img {
+  transition: all 0.3s ease;
 }
 .container .card-info p {
   text-align: justify;
@@ -109,12 +115,6 @@ nav button a {
   transform: scale(1.1);
 }
 
-.container .card-img {
-  flex: 0 40%;
-  max-width: 40%;
-  transition: all 0.3s ease;
-}
-
 .container .card-img:hover {
   transform: scale(1.1);
 }
@@ -126,10 +126,72 @@ nav button a {
 }
 .container .card-img img {
   width: 100%;
+  object-fit: cover;
   height: 300px;
   border-radius: 20px 20px 0 0;
 }
 .container .card-img h2,
 p {
   text-align: center;
+}
+
+/* ======= Hamburger Menu========== */
+
+.hamburger-menu {
+  display: none;
+}
+
+.open-hamburger-menu {
+  display: none;
+  background: lightgray;
+}
+
+.open-hamburger-menu ul {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.open-hamburger-menu li a {
+  color: white;
+}
+
+.open-hamburger-menu li.active {
+  background-color: gray;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .hamburger-menu {
+    display: block;
+  }
+  nav ul li,
+  nav button {
+    display: none;
+  }
+  .container .card {
+    grid-template-columns: 1fr;
+    border: none;
+    box-shadow: none;
+    width: 80vw;
+    background-color: white;
+    margin: 0 auto;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  nav {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container .card {
+    grid-template-columns: 1fr;
+    background-color: white;
+    border: none;
+    box-shadow: none;
+    width: 80vw;
+  }
 }

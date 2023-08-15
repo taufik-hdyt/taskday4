@@ -12,13 +12,18 @@ a {
 
 /* ============= Nav =================== */
 nav {
-  background-color: white;
+  background-color: #ebebeb;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 10px gray;
+}
+
+nav .nav-btn {
+  display: flex;
+  gap: 20px;
 }
 
 nav ul {
@@ -36,14 +41,9 @@ nav ul li a {
   color: black;
 }
 
-nav ul .active {
+nav ul li .active {
   color: black;
   font-weight: bold;
-}
-
-nav ul li img {
-  width: 40px;
-  margin-right: 20px;
 }
 
 nav button {
@@ -57,39 +57,42 @@ nav button a {
   color: white;
   text-decoration: none;
 }
-
 /* ============= MyProjects ============== */
-
+.container {
+  margin-top: 20px;
+}
 .container h1 {
   text-align: center;
 }
 .container .form {
+  width: 50vw;
+  padding: 5px;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
-  padding-top: 20px;
+  margin: 20px auto;
 }
 
 .container .form .input {
   padding: 10px 0;
+  width: 100%;
 }
 
 .container .input label {
   font-weight: bold;
 }
 .container .input input {
-  height: 30px;
+  height: 40px;
 }
 .container .input input,
 textarea {
   width: 100%;
   resize: none;
   border-radius: 5px;
-  padding: 5px;
   font-size: 18px;
   border: none;
   border: 1px solid gray;
 }
+
 .container .input textarea {
   height: 200px;
 }
@@ -154,11 +157,10 @@ textarea {
 
 .my-project {
   background-color: #ebebeb;
-  min-height: 500px;
-  padding: 20px 120px;
+  padding: 30px 60px;
 }
 .my-project h1 {
-  margin: 50px 0;
+  margin: 20px 0;
 }
 
 .my-project .img-cover {
@@ -168,9 +170,10 @@ textarea {
 }
 
 .my-project .card {
-  width: 300px;
+  width: 250px;
   padding: 10px;
   padding-bottom: 20px;
+  background-color: white;
   border: 1px solid grey;
   border-radius: 10px;
   box-shadow: 0 2px 5px gray;
@@ -178,29 +181,30 @@ textarea {
 }
 
 .my-project .card .title {
-  margin-top: 10px;
+  margin-top: 5px;
   font-size: 20px;
   font-weight: bold;
 }
 
 .my-project .card .duration {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 100;
 }
 
 .my-project .card .description {
-  margin-top: 10px;
+  margin-top: 5px;
   text-align: justify;
   text-overflow: ellipsis;
   overflow: hidden;
   height: 80px;
+  margin-bottom: 10px;
 }
 .my-project .card .icons img {
   width: 20px;
 }
 .my-project .card .icons {
   display: flex;
-  margin-top: 20px;
+  margin-top: 5px;
   gap: 10px;
 }
 
@@ -221,9 +225,71 @@ textarea {
 .my-project .blog-post {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 40px;
 }
 
 .my-project #post {
   cursor: pointer;
+}
+
+/*  Hamburger Menu */
+.hamburger-menu {
+  display: none;
+}
+
+.open-hamburger-menu {
+  display: none;
+  background: lightgray;
+}
+
+.open-hamburger-menu ul {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.open-hamburger-menu li a {
+  color: white;
+}
+
+.open-hamburger-menu li.active {
+  background-color: gray;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+  nav {
+    padding: 0 20px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  nav ul li,
+  nav button {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .container .form {
+    width: 90vw;
+    margin: 5px auto;
+
+    padding: 0;
+  }
+
+  .my-project {
+    padding: 10px;
+  }
+  .my-project .blog-post {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .my-project .card {
+    width: 250px;
+  }
 }

@@ -12,17 +12,33 @@
   </head>
   <body>
     <nav>
-      <ul>
-        <li>
-          <img src="image/profile.png" alt="logo" />
-        </li>
-        <li class="btn-nav active"><a href="index.html">Home</a></li>
-        <li class="btn-nav"><a href="myproject.html">My Projects</a></li>
-      </ul>
+      <div class="nav-btn">
+        <img style="width: 40px" src="image/profile.png" alt="logo" />
+        <ul>
+          <li class="btn-nav"><a class="active" href="index.html">Home</a></li>
+          <li class="btn-nav"><a href="myproject.html">My Projects</a></li>
+        </ul>
+      </div>
       <button>
         <a href="contact.html">Contact</a>
       </button>
+      <div
+        style="cursor: pointer"
+        onclick="hamburgerNav()"
+        class="hamburger-menu"
+        id="hamburger-menu"
+      >
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </div>
     </nav>
+
+    <div class="open-hamburger-menu" id="open-hamburger-menu">
+      <ul>
+        <li class="btn-nav active"><a href="index.html">Home</a></li>
+        <li class="btn-nav"><a href="myproject.html">My Projects</a></li>
+        <li class="btn-nav"><a href="myproject.html">Contact</a></li>
+      </ul>
+    </div>
 
     <div class="container">
       <div class="card">
@@ -67,5 +83,7 @@
         </div>
       </div>
     </div>
+
+    <script src="js/hamburger.js"></script>
   </body>
 </html>

@@ -10,13 +10,18 @@ body {
 }
 
 nav {
-  background-color: white;
+  background-color: #ebebeb;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  box-shadow: 0 0 2px gray;
+  box-shadow: 0 0 10px gray;
+}
+
+nav .nav-btn {
+  display: flex;
+  gap: 20px;
 }
 
 nav ul {
@@ -32,18 +37,13 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: black;
+  font-weight: 300;
 }
 
-nav ul .active {
-  color: black;
+nav ul li .active {
   font-weight: bold;
+  color: black;
 }
-
-nav ul li img {
-  width: 40px;
-  margin-right: 20px;
-}
-
 nav button {
   background: black;
   padding: 7px 20px;
@@ -58,18 +58,15 @@ nav button a {
 }
 
 /*  =============form============== */
-
 .form-container {
-  padding-bottom: 50px;
+  padding: 20px;
 }
-
 form {
   width: 400px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
   background-color: #ebebeb;
-  margin-top: 50px;
   box-shadow: 0 2px 5px black;
 }
 
@@ -120,4 +117,50 @@ form h2 {
 
 select {
   font-size: 15px;
+}
+
+/* ======= Hamburger Menu========== */
+
+.hamburger-menu {
+  display: none;
+}
+
+.open-hamburger-menu {
+  display: none;
+  background: lightgray;
+}
+
+.open-hamburger-menu ul {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.open-hamburger-menu li a {
+  color: white;
+}
+
+.open-hamburger-menu li.active {
+  background-color: gray;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  nav ul li,
+  nav button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 85%;
+    margin: 20px auto;
+  }
 }
