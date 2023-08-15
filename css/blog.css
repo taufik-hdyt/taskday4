@@ -12,12 +12,17 @@ a {
 
 nav {
   background-color: #ebebeb;
-  box-shadow: 0 0 5px black;
   height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
+  box-shadow: 0 0 5px gray;
+}
+
+nav .nav-btn {
+  display: flex;
+  gap: 20px;
 }
 
 nav ul {
@@ -33,16 +38,12 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: black;
+  font-weight: 300;
 }
 
-nav ul .active {
-  color: black;
+nav ul li .active {
   font-weight: bold;
-}
-
-nav ul li img {
-  width: 40px;
-  margin-right: 20px;
+  color: black;
 }
 
 nav button {
@@ -69,22 +70,13 @@ h2 {
 }
 
 .container .info {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
 
 .container .info img {
   width: 100%;
-}
-
-.container .info .info-img {
-  flex: 60%;
-  max-width: 60%;
-}
-
-.container .info .info-detail {
-  flex: 40%;
-  max-width: 40%;
 }
 
 .container .info-detail p {
@@ -131,4 +123,59 @@ h2 {
   z-index: 2;
   opacity: 1;
   animation: slideSection 1s ease;
+}
+
+/* ======= Hamburger Menu========== */
+
+.hamburger-menu {
+  display: none;
+}
+
+.open-hamburger-menu {
+  display: none;
+  background: lightgray;
+}
+
+.open-hamburger-menu ul {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.open-hamburger-menu li a {
+  color: white;
+}
+
+.open-hamburger-menu li.active {
+  background-color: gray;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .container .info {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .container .info-detail .technologies {
+    margin-top: 20px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  nav ul li,
+  nav button {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .container .info {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .container .info-detail .technologies {
+    margin-top: 20px;
+  }
 }

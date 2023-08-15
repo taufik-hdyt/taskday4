@@ -17,7 +17,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 5px gray;
 }
 
 nav .nav-btn {
@@ -63,16 +63,15 @@ nav button a {
 }
 
 .container .card {
-  width: 70vw;
+  width: 60vw;
   border: 1px solid gray;
   border-radius: 10px;
-  margin: 70px auto;
+  margin: 10px auto;
   background: whitesmoke;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   padding: 20px 20px;
   gap: 20px;
-  box-shadow: 0 2px 5px gray;
 }
 
 .container .card-img {
@@ -112,10 +111,6 @@ nav button a {
   transition: 0.3s ease;
 }
 .container .social-media a:hover {
-  transform: scale(1.1);
-}
-
-.container .card-img:hover {
   transform: scale(1.1);
 }
 
@@ -193,5 +188,11 @@ p {
     border: none;
     box-shadow: none;
     width: 80vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container .card {
+    width: 60vw;
   }
 }
