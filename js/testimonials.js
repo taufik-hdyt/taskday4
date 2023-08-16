@@ -92,4 +92,3 @@ for (let i = 0; i < testimonialData.length; i++) {
   testimonialHTML += testimonialData[i].testimonialHTML;
 }
 document.getElementById("testimonials").innerHTML = testimonialHTML;
-console.log(testimonialHTML);
