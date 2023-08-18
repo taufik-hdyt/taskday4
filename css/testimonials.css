@@ -120,6 +120,43 @@ h2 {
   height: 200px;
 }
 
+.card-container .card .rating {
+  text-align: end;
+  font-weight: bold;
+}
+
+.rating {
+  margin-bottom: 20px;
+}
+
+.rating p {
+  text-align: center;
+  font-weight: 600;
+}
+.rating .filter-btn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card .rating-desc {
+  text-align: end;
+  font-weight: 600;
+}
+
+.rating .filter-btn button {
+  background: black;
+  color: white;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+
+.empty {
+  margin: 0 auto;
+  font-weight: bold;
+}
+
 /* CSS Responsif */
 
 @media only screen and (max-width: 480px) {
@@ -144,5 +181,9 @@ h2 {
 
   nav {
     padding: 0 15px;
+  }
+
+  .rating {
+    padding: 0 30px;
   }
 }
