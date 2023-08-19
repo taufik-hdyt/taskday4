@@ -218,10 +218,11 @@ textarea {
   margin-top: 5px;
   text-align: justify;
   font-size: 10px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  height: 40px;
   margin-bottom: 10px;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .my-project .card .icons img {
   width: 20px;
@@ -302,11 +303,16 @@ textarea {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .my-project .card {
+    width: 250px;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .container .form {
     width: 90vw;
     margin: 5px auto;
-
     padding: 0;
   }
 
@@ -319,6 +325,6 @@ textarea {
   }
 
   .my-project .card {
-    width: 250px;
+    width: 300px;
   }
 }
