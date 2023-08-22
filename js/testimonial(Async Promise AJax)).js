@@ -1,3 +1,4 @@
+// connet api
 const testimonials = new Promise((resolve, reject) => {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "https://api.npoint.io/6230eb57d753357ecf19", true);
@@ -16,10 +17,11 @@ const testimonials = new Promise((resolve, reject) => {
   xhr.send();
 });
 
+// show all testimonials data
 async function allTestimonials() {
   try {
     const res = await testimonials;
-    // console.log(res);
+    console.log(res);
     let testimonialHTML = "";
     res.data.forEach(
       (item) =>
@@ -40,6 +42,7 @@ async function allTestimonials() {
 }
 allTestimonials();
 
+// filter
 async function filterTestimonial(rating) {
   try {
     let testimonialHTML = "";
