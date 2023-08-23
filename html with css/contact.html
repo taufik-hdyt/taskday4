@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+</head>
+<body>
+  <body>
+    <nav>
+      <div class="nav-btn">
+        <img style="width: 40px" src="image/profile.png" alt="logo" />
+        <ul>
+          <li class="btn-nav"><a href="index.html">Home</a></li>
+          <li class="btn-nav"><a href="myproject.html">My Projects</a></li>
+          <li class="btn-nav">
+            <a href="testimonials.html">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+      <button>
+        <a href="contact.html">Contact</a>
+      </button>
+      <div
+      style="cursor: pointer"
+      onclick="hamburgerNav()"
+      class="hamburger-menu"
+      id="hamburger-menu"
+    >
+      <i class="fa-solid fa-bars fa-xl"></i>
+    </div>
+    </nav>
+
+
+    <div class="open-hamburger-menu" id="open-hamburger-menu">
+      <ul>
+        <li class="btn-nav "><a href="index.html">Home</a></li>
+        <li class="btn-nav"><a href="myproject.html">My Projects</a></li>
+        <li class="btn-nav"><a href="myproject.html">Testimonials</a></li>
+        <li class="btn-nav active"><a  href="myproject.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="form-container">
+      <form>
+        <h2>GET IN TOUCH</h2>
+        <div class="input">
+          <label for="input-name">Name</label>
+          <input type="text" id="input-name">
+        </div>
+        <div  class="input required">
+          <label for="input-email">Email</label>
+          <input required type="email" id="input-email">
+        </div>
+        <div  class="input required">
+          <label for="input-phone">Phone Number</label>
+          <input type="number" id="input-phone">
+        </div>
+        <div  class="input">
+          <label for="input-subject">Subject</label>
+          <select id="input-subject">
+            <option value="" hidden></option>
+            <option >Frontend Web</option>
+            <option >Backend</option>
+            <option >FullStack</option>
+          </select>
+        </div>
+
+        <div class="input">
+          <label for="input-message">Your Messeage</label>
+          <textarea id="input-message"cols=></textarea>
+        </div>
+
+        <div class="btn-submit">
+          <button type="button" onclick="submitData()">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/contact.js"></script>
+    <script src="js/hamburger.js"></script>
+  </body>
+</body>
+</html>
+
