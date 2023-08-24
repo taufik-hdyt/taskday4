@@ -4,62 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-    />
-    <style>
-      a {
-        text-decoration: none;
-      }
-    </style>
   </head>
   <body>
-    <!--  ============ Start Nav -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img style="width: 40px" src="../image/profile.png" alt="logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link fw-bolder active"
-                aria-current="page"
-                href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="project.html">Add Project</a>
-            </li>
-          </ul>
-
-          <a class="btn btn-danger" href="contact.html">Contact me</a>
-        </div>
+    <nav>
+      <div class="nav-btn">
+        <img style="width: 40px" src="image/logo.png" alt="logo" />
+        <ul>
+          <li class="btn-nav"><a class="active" href="index.html">Home</a></li>
+          <li class="btn-nav"><a href="myproject.html">My Projects</a></li>
+          <li class="btn-nav">
+            <a href="testimonials.html">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+      <button>
+        <a href="contact.html">Contact</a>
+      </button>
+      <div
+        style="cursor: pointer"
+        onclick="hamburgerNav()"
+        class="hamburger-menu"
+        id="hamburger-menu"
+      >
+        <i class="fa-solid fa-bars fa-xl"></i>
       </div>
     </nav>
-    <!-- =================== end Nav -->
 
-    <div class="bg-white">
-      <div class="container my-5 w-50 d-flex shadow-lg rounded-2 p-4 gap-2">
-        <div>
+    <div class="open-hamburger-menu" id="open-hamburger-menu">
+      <ul>
+        <li class="btn-nav active"><a href="index.html">Home</a></li>
+        <li class="btn-nav"><a href="myproject.html">My Projects</a></li>
+        <li class="btn-nav">
+          <a href="testimonials.html">Testimonials</a>
+        </li>
+        <li class="btn-nav"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <div class="card-info">
           <h2>Hi Welcome</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
@@ -71,148 +60,37 @@
           </p>
 
           <div class="button">
-            <a href="contact.html" class="btn btn-dark">Contact</a>
-            <a class="text-black" href="#"
+            <a href="contact.html" class="contact">Contact</a>
+            <a class="download-cv" href="#"
               >download CV <i class="fa-solid fa-download"></i
             ></a>
           </div>
 
-          <div class="social-media mt-5">
-            <a class="text-black" href="https://linkedin.com" target="_blank">
+          <div class="social-media">
+            <a href="https://linkedin.com" target="_blank">
               <i class="fa-brands fa-linkedin fa-2xl"></i>
             </a>
-            <a
-              class="text-black"
-              href="https://instagram.com/taufikhdyt.id"
-              target="_blank"
-            >
+            <a href="https://instagram.com/taufikhdyt.id" target="_blank">
               <i class="fa-brands fa-square-instagram fa-2xl"></i>
             </a>
-            <a
-              class="text-black"
-              href="https://facebook.com/Taufikhdyt25"
-              target="_blank"
-            >
+            <a href="https://facebook.com/Taufikhdyt25" target="_blank">
               <i class="fa-brands fa-square-facebook fa-2xl"></i>
             </a>
-            <a class="text-black" href="https://twitter.com" target="_blank">
+            <a href="https://twitter.com" target="_blank">
               <i class="fa-brands fa-square-twitter fa-2xl"></i>
             </a>
           </div>
         </div>
 
-        <div class="shadow-sm rounded-bottom-2 text-center">
-          <img
-            width="100%"
-            class="rounded-top-2"
-            src="../image/foto.jpg"
-            alt="profiles"
-          />
+        <div class="card-img">
+          <img src="image/foto.jpg" alt="profiles" />
           <h2>Taufik Hidayat</h2>
           <p>Fullstack Developer</p>
         </div>
       </div>
     </div>
 
-    <div class="bg-dark-subtle p-5">
-      <h4 class="text-center">MY PROJECT</h4>
-      <div class="mt-5">
-        <div id="post" class="d-flex gap-2" onclick="detailBlog()">
-          <div class="card w-25 p-3">
-            <img class="img-cover w-100" src="../image/img.jpg" alt="profile" />
-            <p class="fw-bolder mt-2">Dumbways Mobile App - 2021</p>
-            <p class="fw-lighter">durasi : 3 bulan</p>
-            <p style="text-align: justify">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
-              illo.
-            </p>
-            <div class="d-flex gap-2">
-              <img
-                style="width: 20px"
-                src="../image/icons/playstore.png"
-                alt="playstore"
-              />
-              <img
-                style="width: 20px"
-                src="../image/icons/android-logo.png"
-                alt="android"
-              />
-              <img
-                style="width: 20px"
-                src="../image/icons/java-logo.png"
-                alt="java"
-              />
-            </div>
-            <div class="d-flex gap-2 mt-3">
-              <button class="btn btn-danger w-100">edit</button>
-              <button class="btn btn-danger w-100">delete</button>
-            </div>
-          </div>
-          <div class="card w-25 p-3">
-            <img class="img-cover w-100" src="../image/img.jpg" alt="profile" />
-            <p class="fw-bolder mt-2">Dumbways Mobile App - 2021</p>
-            <p class="fw-lighter">durasi : 3 bulan</p>
-            <p style="text-align: justify">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
-              illo.
-            </p>
-            <div class="d-flex gap-2">
-              <img
-                style="width: 20px"
-                src="../image/icons/playstore.png"
-                alt="playstore"
-              />
-              <img
-                style="width: 20px"
-                src="../image/icons/android-logo.png"
-                alt="android"
-              />
-              <img
-                style="width: 20px"
-                src="../image/icons/java-logo.png"
-                alt="java"
-              />
-            </div>
-            <div class="d-flex gap-2 mt-3">
-              <button class="btn btn-danger w-100">edit</button>
-              <button class="btn btn-danger w-100">delete</button>
-            </div>
-          </div>
-          <div class="card w-25 p-3">
-            <img class="img-cover w-100" src="../image/img.jpg" alt="profile" />
-            <p class="fw-bolder mt-2">Dumbways Mobile App - 2021</p>
-            <p class="fw-lighter">durasi : 3 bulan</p>
-            <p style="text-align: justify">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
-              illo.
-            </p>
-            <div class="d-flex gap-2">
-              <img
-                style="width: 20px"
-                src="../image/icons/playstore.png"
-                alt="playstore"
-              />
-              <img
-                style="width: 20px"
-                src="../image/icons/android-logo.png"
-                alt="android"
-              />
-              <img
-                style="width: 20px"
-                src="../image/icons/java-logo.png"
-                alt="java"
-              />
-            </div>
-            <div class="d-flex gap-2 mt-3">
-              <button class="btn btn-danger w-100">edit</button>
-              <button class="btn btn-danger w-100">delete</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script src="js/hamburger.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/oopJS/1.class.js"></script>
   </body>
 </html>
